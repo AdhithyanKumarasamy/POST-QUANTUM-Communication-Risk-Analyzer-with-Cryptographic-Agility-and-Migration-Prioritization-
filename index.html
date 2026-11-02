@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SecureAzCloud Post-Quantum Migration Resource Hub</title>
+  <meta
+    name="description"
+    content="Vendor-neutral post-quantum cryptography readiness templates, checklists, playbooks, and reference guidance for enterprise cloud, identity, SCADA/ICS, and critical infrastructure environments."
+  />
+  <link rel="stylesheet" href="assets/home.css?v=20260929-2" />
+<meta name="author" content="Ankit Gupta">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="SecureAzCloud Post-Quantum Migration Resource Hub home">
+        <span class="brand-mark">PQC</span>
+        <span>
+          <strong>SecureAzCloud</strong>
+          <span>Post-Quantum Hub</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a class="active" href="#home">Home</a>
+        <a href="#downloads">Resources</a>
+        <a href="#readiness">Readiness</a>
+        <a href="#playbook">Playbook</a>
+        <a href="#reference-map">Reference Map</a>
+        <a href="#start">Start</a>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="announcement" aria-label="Hub update">
+    <div class="announcement-inner">
+      <div><span class="new-pill">New</span>Version 2.0: four updated workbooks for 2026, 2027, and later migration planning</div>
+      <a class="download" href="downloads/secureazcloud-pqc-crypto-inventory-template-v2.0.xlsx">Download XLSX</a>
+    </div>
+  </aside>
+
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div data-reveal>
+        <div class="eyebrow">Vendor-neutral post-quantum migration hub</div>
+        <h1><span class="hero-brand">SecureAzCloud</span> <span class="accent">Post-Quantum</span> Migration<br /> Resource Hub</h1>
+        <p class="hero-copy">
+          Implementation guidance, assessment frameworks, migration playbooks, and operational checklists for organizations preparing for NIST-standardized Post-Quantum Cryptography.
+        </p>
+        <div class="meta-line">
+          SecureAzCloud | Vendor-neutral | NIST-aligned | Version 2.0 | Updated 2026-09-29
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="downloads/secureazcloud-pqc-crypto-inventory-template-v2.0.xlsx">Download Workbook</a>
+          <a class="btn btn-secondary" href="#downloads">View Resources</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true" data-reveal>
+        <svg class="orbit-art" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="orbit-gradient" x1="20" y1="50" x2="500" y2="450" gradientUnits="userSpaceOnUse"><stop stop-color="#6de9da"/><stop offset=".5" stop-color="#8ea3fa"/><stop offset="1" stop-color="#c698f9"/></linearGradient>
+            <radialGradient id="orbit-glow"><stop stop-color="#5fcce5" stop-opacity=".15"/><stop offset="1" stop-color="#5fcce5" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle cx="260" cy="260" r="245" fill="url(#orbit-glow)"/>
+          <circle cx="260" cy="260" r="219" stroke="#95b9ee" stroke-opacity=".12"/>
+          <circle cx="260" cy="260" r="170" stroke="#95b9ee" stroke-opacity=".1" stroke-dasharray="3 8"/>
+          <g class="orbit-lines" stroke="url(#orbit-gradient)" stroke-width="1">
+            <ellipse cx="260" cy="260" rx="244" ry="103" transform="rotate(-35 260 260)" stroke-opacity=".48"/>
+            <ellipse cx="260" cy="260" rx="239" ry="104" transform="rotate(35 260 260)" stroke-opacity=".35"/>
+            <ellipse cx="260" cy="260" rx="225" ry="110" transform="rotate(90 260 260)" stroke-opacity=".22"/>
+          </g>
+          <g class="orbit-dots"><circle cx="80" cy="135" r="5" fill="#8df3e0"/><circle cx="452" cy="349" r="4" fill="#c4a2ff"/><circle cx="273" cy="41" r="3" fill="#a9c8ff"/><circle cx="172" cy="456" r="3" fill="#ffd183"/></g>
+          <path d="M37 260h22m402 0h22M260 37v22m0 402v22" stroke="#bcd4f5" stroke-opacity=".25"/>
+        </svg>
+        <div class="quantum-card">
+          <div class="hex">
+            <svg class="shield-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 5 40 11v12c0 10-16 20-16 20S8 33 8 23V11L24 5Z"/><rect x="17" y="20" width="14" height="12" rx="3"/><path d="M20 20v-4a4 4 0 0 1 8 0v4M24 25v3"/></svg>
+            <strong>PQC</strong><span>Readiness</span>
+          </div>
+          <div class="visual-badge">NIST-aligned</div>
+        </div>
+        <div class="orbit-label one">Inventory</div>
+        <div class="orbit-label two">Crypto agility</div>
+        <div class="orbit-label three">Cloud identity</div>
+        <div class="orbit-label four">OT continuity</div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" aria-label="Hub overview">
+      <div class="quick-nav" data-reveal>
+        <a href="#home">Hub Home</a>
+        <a href="resources/pqc-readiness-checklist.html">PQC Readiness Checklist</a>
+        <a href="resources/cloud-iam-migration-playbook.html">Cloud/IAM Playbook</a>
+        <a href="resources/scada-ics-pqc-checklist.html">SCADA/ICS Checklist</a>
+        <a href="resources/crypto-agility-assessment-template.html">Crypto Agility Assessment</a>
+        <a href="resources/pqc-cloud-workload-identity-migration-checklist.html">Cloud Identity Checklist</a>
+        <a href="resources/nist-2026-and-beyond.html">2026 and Beyond</a>
+        <a href="#reference-map">Reference Map</a>
+      </div>
+
+      <div class="intro">
+        <div data-reveal>
+          <p class="lead">
+            This hub provides public-facing templates and checklists for post-quantum cryptography readiness. It focuses on practical migration preparation: cryptographic inventory, crypto-agility, cloud and IAM dependencies, supplier readiness, and safety-first OT/ICS/SCADA planning.
+          </p>
+          <div class="callout">
+            <strong>Recommended starting point:</strong> download the workbook, complete the Crypto Inventory sheet for priority systems, then use the playbook and checklists to build a risk-based migration roadmap.
+          </div>
+        </div>
+
+        <aside class="status-box" data-reveal aria-label="Hub scope summary">
+          <p>Designed for enterprise teams that need usable artifacts, not just theory.</p>
+          <div class="status-grid">
+            <div class="status-item"><strong>4</strong><span>Workbooks</span></div>
+            <div class="status-item"><strong>4</strong><span>Domains</span></div>
+            <div class="status-item"><strong>2.0</strong><span>Version</span></div>
+            <div class="status-item"><strong>2026</strong><span>Updated</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="downloads" class="section">
+      <div class="section-head" data-reveal>
+        <h2>Resource downloads</h2>
+        <p>Templates and checklists for teams building a measured migration path from today’s cryptography to quantum-resistant standards. All four current workbooks are version 2.0; earlier downloads remain available as historical artifacts.</p>
+      </div>
+
+      <div class="resource-grid">
+        <article class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M9 9v12M13 13h3m-3 4h3"/></svg></div>
+          <h3>Crypto Inventory Template</h3>
+          <p>Version 2.0 inventory with ownership, cryptographic roles, lifetimes, evidence, dependency tracking, risk prioritization, and migration planning.</p>
+          <a class="btn" href="downloads/secureazcloud-pqc-crypto-inventory-template-v2.0.xlsx">Download XLSX</a>
+        </article>
+
+        <article id="readiness" class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 6 2 2 4-4m-6 9 2 2 4-4M14 6h6m-6 7h6M5 20h15"/></svg></div>
+          <h3>PQC Readiness Checklist</h3>
+          <p>Governance, discovery, risk classification, architecture, PKI, cloud/IAM, supplier, testing, operations, and training readiness items.</p>
+          <a class="btn" href="resources/pqc-readiness-checklist.html">Open Checklist</a>
+        </article>
+
+        <article id="playbook" class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17H6a4 4 0 0 1 0-8 6 6 0 0 1 11-2 5 5 0 0 1 1 10h-1M12 12v9m-3-3 3 3 3-3"/></svg></div>
+          <h3>Cloud/IAM Migration Playbook</h3>
+          <p>Phase-based migration playbook for cloud services, IAM, machine identities, certificates, federation, workload identities, and signing dependencies.</p>
+          <a class="btn" href="resources/cloud-iam-migration-playbook.html">Open Playbook</a>
+        </article>
+
+        <article id="scada" class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l6 3V6l6 4V3h5v18H3Z"/><path d="M7 16h1m4 0h1m4 0h1"/></svg></div>
+          <h3>SCADA/ICS PQC Checklist</h3>
+          <p>Safety-first checklist for OT/ICS/SCADA cryptographic discovery, remote access, vendor roadmaps, testing, compensating controls, and lifecycle planning.</p>
+          <a class="btn" href="resources/scada-ics-pqc-checklist.html">Open OT Checklist</a>
+        </article>
+
+        <article id="agility" class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 8a8 8 0 0 0-14-3L3 8m0-5v5h5M4 16a8 8 0 0 0 14 3l3-3m0 5v-5h-5"/></svg></div>
+          <h3>Crypto Agility Assessment</h3>
+          <p>Assessment prompts for algorithm visibility, replacement speed, certificate lifecycle readiness, integration ownership, policy exception handling, and measurable agility.</p>
+          <a class="btn" href="resources/crypto-agility-assessment-template.html">Open Assessment</a>
+        </article>
+
+        <article id="identity" class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 11-3M17 12l4 2v3c0 3-4 5-4 5s-4-2-4-5v-3l4-2Z"/></svg></div>
+          <h3>Cloud Identity Checklist</h3>
+          <p>Version 2.0 checklist for federation, workload identities, token/assertion signing, certificate chains, provider dependencies, and migration tests.</p>
+          <a class="btn" href="resources/pqc-cloud-workload-identity-migration-checklist.html">Open Identity Checklist</a>
+        </article>
+
+        <article class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H5v18h14V8l-5-5Zm0 0v5h5M8 13h8M8 17h8"/></svg></div>
+          <h3>CSV Inventory Template</h3>
+          <p>Lightweight CSV version of the cryptographic inventory fields for teams that want to import data into Power BI, GRC tooling, or migration trackers.</p>
+          <a class="btn" href="downloads/secureazcloud-pqc-crypto-inventory-template-v2.0.csv">Download CSV</a>
+        </article>
+
+        <article class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="7" cy="19" r="2"/><circle cx="19" cy="18" r="2"/><path d="m7 5 10 1M5 7l2 10m2 2 8-1M8 17 17 8"/></svg></div>
+          <h3>Reference Map</h3>
+          <p>Mapped guidance areas across NIST post-quantum standards, federal migration expectations, enterprise implementation dependencies, and operational control families.</p>
+          <a class="btn" href="#reference-map">Open Map</a>
+        </article>
+
+        <article class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4V6Zm4 15h8M12 18v3M7 12h3l2-3 2 6 2-3h2"/></svg></div>
+          <h3>SCADA/ICS Continuity Workbook</h3>
+          <p>Version 2.0 workbook for OT inventory, firmware and trust lifetimes, latency tests, vendor roadmaps, safety gates, rollback, and replacement planning.</p>
+          <a class="btn" href="resources/scada-ics-pqc-migration-continuity-checklist.html">Open Continuity Checklist</a>
+        </article>
+        <article class="resource" data-reveal>
+          <div class="resource-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18M8 15h8m-3-3 3 3-3 3"/></svg></div>
+          <h3>2026 and Beyond Guide</h3>
+          <p>Source status, threat coverage, 2026 baseline, 2027 execution, and later migration horizons. Final standards, draft proposals, and hub targets are distinguished.</p>
+          <a class="btn" href="resources/nist-2026-and-beyond.html">Open Planning Guide</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="section two-col" id="readiness-detail">
+        <div data-reveal>
+          <div class="eyebrow">Readiness checklist</div>
+          <h2>Prepare the organization before algorithms change</h2>
+          <p class="lead">
+            PQC readiness begins with ownership, inventory discipline, and a practical view of where cryptography supports business-critical systems.
+          </p>
+        </div>
+        <ul class="feature-list" data-reveal>
+          <li>Define migration ownership across security, cloud, IAM, architecture, procurement, legal, and platform teams.</li>
+          <li>Identify systems using public key cryptography, certificates, signing, federation, VPN, TLS, SSH, PKI, HSMs, and embedded libraries.</li>
+          <li>Classify risk by data sensitivity, system criticality, exposure, cryptographic dependency, vendor control, and migration complexity.</li>
+          <li>Track vendor PQC roadmaps and require evidence for supported algorithms, hybrid modes, integration constraints, and lifecycle timelines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section two-col" id="playbook-detail">
+      <div data-reveal>
+        <div class="eyebrow">Migration playbook</div>
+        <h2>Move from discovery to controlled transition</h2>
+        <p class="lead">
+          A cloud and IAM migration plan should sequence visibility, readiness, testing, staged adoption, and operational monitoring.
+        </p>
+      </div>
+      <div class="timeline" data-reveal>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div><strong>Inventory and classify</strong><p>Build a cryptographic dependency map across cloud, identity, workloads, certificates, integrations, and suppliers.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div><strong>Prioritize and design</strong><p>Rank systems by risk and migration feasibility, then define hybrid, replacement, isolation, or compensating control strategies.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div><strong>Test and stage</strong><p>Validate PQC-ready libraries, certificates, identity flows, service-to-service trust, logging, rollback, and performance impact.</p></div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div><strong>Operate and improve</strong><p>Track exceptions, vendor readiness, crypto policy drift, certificate lifecycle changes, and migration progress metrics.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="section" id="scada-detail">
+        <div class="section-head" data-reveal>
+          <h2>SCADA and ICS planning</h2>
+          <p>Operational technology environments need a safety-first migration path that respects uptime, vendor constraints, certification boundaries, and long equipment lifecycles.</p>
+        </div>
+        <div class="matrix">
+          <div class="matrix-item" data-reveal>
+            <strong>Discover cryptographic use</strong>
+            <p>Map remote access, engineering workstations, gateways, historian connections, firmware signing, vendor tunnels, and certificate-based trust.</p>
+          </div>
+          <div class="matrix-item" data-reveal>
+            <strong>Control the transition</strong>
+            <p>Use segmentation, jump hosts, access control, compensating monitoring, and tested maintenance windows before touching production control paths.</p>
+          </div>
+          <div class="matrix-item" data-reveal>
+            <strong>Plan with vendors</strong>
+            <p>Request PQC roadmaps, upgrade compatibility, performance constraints, validated firmware paths, rollback plans, and support timelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section two-col" id="agility-detail">
+      <div data-reveal>
+        <div class="eyebrow">Crypto agility</div>
+        <h2>Measure how quickly cryptography can change</h2>
+        <p class="lead">
+          Crypto-agility is the operational ability to identify, replace, validate, and govern cryptography without rebuilding entire systems.
+        </p>
+      </div>
+      <ul class="feature-list" data-reveal>
+        <li>Document algorithms, key sizes, certificates, protocols, libraries, owners, business processes, and renewal timelines.</li>
+        <li>Identify hardcoded cryptography, unsupported libraries, vendor-managed trust, custom protocols, and unsupported certificate chains.</li>
+        <li>Measure replacement effort by owner availability, integration testing needs, downtime windows, compliance constraints, and rollback complexity.</li>
+        <li>Maintain exception records with business justification, expiration dates, compensating controls, and assigned remediation owners.</li>
+      </ul>
+    </section>
+
+    <section class="band">
+      <div class="section two-col" id="identity-detail">
+        <div data-reveal>
+          <div class="eyebrow">Cloud identity</div>
+          <h2>Prioritize the trust systems every application depends on</h2>
+          <p class="lead">
+            Identity platforms, federation flows, token signing, workload identities, and certificate authorities are high-leverage starting points for PQC readiness.
+          </p>
+        </div>
+        <ul class="feature-list" data-reveal>
+          <li>Inventory SAML, OIDC, OAuth, token signing certificates, application registrations, enterprise applications, and federation metadata.</li>
+          <li>Track workload identities, managed identities, service principals, automation identities, CI/CD credentials, and machine-to-machine trust.</li>
+          <li>Review certificate authority chains, renewal automation, key storage, HSM dependencies, signing processes, and rotation ownership.</li>
+          <li>Align conditional access, privileged access, logging, incident response, and policy exception workflows with the PQC migration roadmap.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="currency">
+      <h2>Current evidence. A plan that can evolve.</h2>
+      <div class="callout"><strong>Sources reviewed 2026-09-29.</strong> Final FIPS 203/204/205 and NIST CSWP 39 Update 1 inform this release. NIST IR 8547 transition dates remain draft proposals. The 2026 and 2027 milestones in this hub are organization-adaptable planning targets, not universal NIST deadlines.</div>
+      <p>Review the <a href="resources/reference-map.html"><strong>source status register</strong></a>, <a href="https://github.com/CyberAutomationX/Post-Quantum-Migration-Hub/blob/main/release-notes-v2.0.0.md"><strong>release notes</strong></a>, <a href="https://github.com/CyberAutomationX/Post-Quantum-Migration-Hub/blob/main/FINAL-REPORT-v2.0.0.md"><strong>final update report</strong></a>, and <a href="https://github.com/CyberAutomationX/Post-Quantum-Migration-Hub/blob/main/VALIDATION-REPORT.md"><strong>validation report</strong></a>. Review quarterly and when standards, errata, protocols, suppliers, or threats change; next planned review: 2026-12-29. Future recommendations are monitored, not assumed known.</p>
+      <p>This independent planning aid is not a NIST publication, certification, compliance determination, or agency endorsement. Risk scoring and schedule targets are hub heuristics requiring local approval.</p>
+    </section>
+    <section class="section" id="reference-map">
+      <div class="section-head" data-reveal>
+        <h2>Reference map</h2>
+        <p>Use these source families to align migration work with public standards, agency guidance, and enterprise security control expectations.</p>
+      </div>
+      <div class="reference" data-reveal>
+        <a href="https://csrc.nist.gov/projects/post-quantum-cryptography" rel="noopener noreferrer"><strong>NIST Post-Quantum Cryptography Project</strong><span>Open</span></a>
+        <a href="https://csrc.nist.gov/pubs/fips/203/final" rel="noopener noreferrer"><strong>FIPS 203 ML-KEM</strong><span>Open</span></a>
+        <a href="https://csrc.nist.gov/pubs/fips/204/final" rel="noopener noreferrer"><strong>FIPS 204 ML-DSA</strong><span>Open</span></a>
+        <a href="https://csrc.nist.gov/pubs/fips/205/final" rel="noopener noreferrer"><strong>FIPS 205 SLH-DSA</strong><span>Open</span></a>
+        <a href="https://www.cisa.gov/quantum" rel="noopener noreferrer"><strong>CISA Quantum Readiness</strong><span>Open</span></a>
+        <a href="resources/reference-map.html"><strong>Source Status and Artifact Crosswalk</strong><span>Open</span></a>
+      </div>
+    </section>
+  </main>
+
+  <section id="start" class="final">
+    <div class="section">
+      <div data-reveal>
+        <h2>Start with the inventory. Build the roadmap from evidence.</h2>
+        <p>Download the workbook, identify priority systems, and use the linked playbooks to turn cryptographic visibility into a practical migration plan.</p>
+      </div>
+      <a class="btn btn-primary" href="downloads/secureazcloud-pqc-crypto-inventory-template-v2.0.xlsx">Download Workbook</a>
+    </div>
+  </section>
+
+  <footer>
+  <p>Author and maintainer: Ankit Gupta</p>
+    SecureAzCloud Post-Quantum Migration Resource Hub v2.0.0 | Reviewed 2026-09-29. Independent, vendor-neutral planning guidance; no agency endorsement.
+  </footer>
+
+  <script>
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-ready");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
+    }
+  </script>
+</body>
+</html>
